@@ -4,7 +4,10 @@ class Homepage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(title: const Text("HomePage"),),
-      drawer: Drawer(
+      body: const Center(
+        child: Text("Home page initiated"),
+      ),
+      drawer: const Drawer(
         child: Text("Home"),
       ),
     );
