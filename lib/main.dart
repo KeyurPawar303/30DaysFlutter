@@ -1,6 +1,7 @@
 import 'package:beggin/Pages/home.dart';
 import 'package:beggin/Pages/open.dart';
 import 'package:flutter/material.dart';
+import '';
 void main() {
   runApp(const MyApp());
 }
@@ -11,8 +12,8 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       //home: const Homepage(),
       routes:{
-        "/": (context)=> Loged(),
-        "/home": (context)=> Homepage(),
+        "/": (context)=> const Loged(),
+        "/home": (context)=> const Homepage(),
       },
     );
 
