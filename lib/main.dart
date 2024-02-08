@@ -1,5 +1,6 @@
 import 'package:beggin/Pages/home.dart';
 import 'package:beggin/Pages/open.dart';
+import 'package:beggin/Pages/signup.dart';
 import 'package:flutter/material.dart';
 import '';
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes:{
         "/": (context)=> const Loged(),
         "/home": (context)=> const Homepage(),
+        "/sign": (context)=> const SignUp(),
       },
     );
 
