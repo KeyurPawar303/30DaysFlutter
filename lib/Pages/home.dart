@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:beggin/Pages/Drawer.dart';
 class Homepage extends StatefulWidget{
   const Homepage({super.key});
 
@@ -14,9 +15,7 @@ class _HomepageState extends State<Homepage> {
       body: const Center(
         child: Text("Home page initiated"),
       ),
-      drawer: const Drawer(
-        child: Text("Home"),
-      ),
+      drawer: MyDrawer(),
     );
   }
 }

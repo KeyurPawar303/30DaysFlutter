@@ -1,12 +1,11 @@
+import 'package:beggin/Pages/home.dart';
 import 'package:flutter/material.dart';
 class SignUp extends StatefulWidget{
   const SignUp ({super.key});
-
   @override
-  State<SignUp> createState() => _HomepageState();
+  State<SignUp> createState() => _SignUpState();
 }
-
-class _HomepageState extends State<SignUp> {
+class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context){
@@ -14,7 +13,6 @@ class _HomepageState extends State<SignUp> {
       child: Form(
         key: _formKey,
         child: Padding(
-
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
@@ -39,13 +37,30 @@ class _HomepageState extends State<SignUp> {
               const SizedBox(
                 height: 50,
               ),
-              Container(
-                width: 150,
-                height: 50,
-                color: Colors.blueAccent,
+              Material(
+                borderRadius: BorderRadius.circular(20),
+                child: InkWell(
+                  onTap:() async {
+                    setState(() {
+                    });
+                    await Future.delayed(const Duration(seconds: 1));
+                    await Navigator.push(context, MaterialPageRoute(builder: (context)=> const Homepage(),));
+                  },
+                  child:AnimatedContainer(
+                    duration: const Duration(seconds: 1),
+                    height: 50,
+                    width: 150,
 
-
-              )
+                    decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                    alignment: Alignment.center,
+                    child:
+                    const Text("SignUp",style:TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
