@@ -1,8 +1,16 @@
+import 'package:beggin/Pages/home.dart';
+import 'package:beggin/Pages/open.dart';
+import 'package:beggin/Pages/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-class MyDrawer extends StatelessWidget {
+class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
 
+  @override
+  State<MyDrawer> createState() => _MyDrawerState();
+}
+
+class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     final image = "https://imgs.search.brave.com/rirbibr-IRwiHxXPqo5hZf3WT81G2VkfltBZhhKPn1g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wdWIt/c3RhdGljLmZvdG9y/LmNvbS9hc3NldHMv/cHJvamVjdHMvcGFn/ZXMvZTE3NDg5MGI3/ZDYxNDkyNWE0ZjI3/NWI2Nzg3M2ZmYjcv/Zm90b3ItMDFiMDIw/M2U1ZTQxNDY5NTg5/MDg3NmQzMjllNTUx/ZDMuanBn";
@@ -31,11 +39,19 @@ class MyDrawer extends StatelessWidget {
               title: Text("Home",
                 textScaleFactor: 1.2,),
            ),
-           const ListTile(
-             leading: Icon(CupertinoIcons.profile_circled,
+            InkWell(
+              onTap: (){
+                setState(() {});
+                Navigator.push(context, MaterialPageRoute(builder:(context)=> const ProfilePage()));
+              },
+             child:Container(
+               child: const  ListTile(
+                 leading: Icon(CupertinoIcons.profile_circled,
+                 ),
+                 title: Text("Profile",
+                   textScaleFactor: 1.2,),
+               ),
              ),
-             title: Text("Profile",
-               textScaleFactor: 1.2,),
            ),
            const ListTile(
              leading: Icon(CupertinoIcons.mail,
