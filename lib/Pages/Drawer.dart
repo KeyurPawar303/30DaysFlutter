@@ -3,6 +3,7 @@ import 'package:beggin/Pages/open.dart';
 import 'package:beggin/Pages/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:open_mail_app/open_mail_app.dart';
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
 
@@ -53,11 +54,19 @@ class _MyDrawerState extends State<MyDrawer> {
                ),
              ),
            ),
-           const ListTile(
-             leading: Icon(CupertinoIcons.mail,
+           InkWell(
+             onTap: (){
+               setState(() {
+               });
+               //LaunchApp.openApp(androidPackageName:'com.android.Gmail');
+               OpenMailApp.openMailApp();
+             },
+             child: const ListTile(
+               leading: Icon(CupertinoIcons.mail,
+               ),
+               title: Text("Mails",
+                 textScaleFactor: 1.2,),
              ),
-             title: Text("Mails",
-               textScaleFactor: 1.2,),
            )
         ],
         ),

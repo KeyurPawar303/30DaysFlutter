@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       //initialRoute: "/home",
       //home: const Homepage(),
       routes:{
-        "/": (context)=> const Homepage(),
+        "/": (context)=> const Loged(),
         "/home": (context)=> const Homepage(),
         "/sign": (context)=> const SignUp(),
         "/profile": (context)=> const ProfilePage(),
@@ -27,3 +27,7 @@ class MyApp extends StatelessWidget {
 
   }
 }
+//Learn about types of tress in flutter
+// - widget Tree
+// - element tree
+// - render tree

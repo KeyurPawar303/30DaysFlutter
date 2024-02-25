@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  open_mail_app: ^0.4.5
   flutter:
     sdk: flutter
 
